@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us - Aslan Publishing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 2.5rem;
+      font-family: 'Georgia', serif;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      font-family: 'Georgia', serif;
+      position: relative;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1rem;
+      position: relative;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      top: 100%;
+      left: 0;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .subdropdown {
+      position: relative;
+    }
+    .subdropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      top: 0;
+      left: 100%;
+    }
+    .subdropdown:hover .subdropdown-content {
+      display: block;
+    }
+    .content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      line-height: 1.6;
+    }
+    .content h2 {
+      font-family: 'Georgia', serif;
+      margin-bottom: 1.5rem;
+    }
+    .content p {
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header>Aslan Publishing</header>
+  <nav>
+    <a href="index.html">home</a>
+    <span>&bull;</span>
+    <div class="dropdown">
+      <a href="#">categories</a>
+      <div class="dropdown-content">
+        <div class="subdropdown">
+          <a href="#">notebooks</a>
+          <div class="subdropdown-content">
+            <a href="trying-my-best-series.html">Trying My Best Series</a>
+            <a href="gifts.html">Gifts</a>
+          </div>
+        </div>
+        <a href="#">books</a>
+        <a href="#" title="Coming Soon!">freebies</a>
+      </div>
+    </div>
+    <span>&bull;</span>
+    <a href="about.html">about us</a>
+    <span>&bull;</span>
+    <a href="contact.html">contact</a>
+  </nav>
+
+  <div class="content">
+    <h2>About Aslan Publishing</h2>
+    <p>Welcome to Aslan Publishing, where creativity meets inspiration. We are dedicated to creating beautiful, high-quality notebooks and journals that help you express yourself and organize your thoughts.</p>
+    
+    <h2>Our Mission</h2>
+    <p>Our mission is to provide thoughtfully designed notebooks that inspire creativity, organization, and self-expression. We believe that everyone deserves a beautiful space to write down their thoughts, dreams, and ideas.</p>
+    
+    <h2>Our Products</h2>
+    <p>From our "Trying My Best Series" to our special gift collections, each notebook is crafted with care and attention to detail. We use high-quality materials and beautiful designs to create products that you'll love to use every day.</p>
+    
+    <h2>Our Story</h2>
+    <p>Founded with a passion for stationery and a love for beautiful design, Aslan Publishing has grown from a small idea into a collection of notebooks that help people capture their thoughts and express their creativity.</p>
+  </div>
+</body>
+</html> 

@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Survived Another Day Of Adulting - Aslan Publishing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 2.5rem;
+      font-family: 'Georgia', serif;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      font-family: 'Georgia', serif;
+      position: relative;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1rem;
+      position: relative;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      top: 100%;
+      left: 0;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .subdropdown {
+      position: relative;
+    }
+    .subdropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      top: 0;
+      left: 100%;
+    }
+    .subdropdown:hover .subdropdown-content {
+      display: block;
+    }
+    .product-container {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      gap: 3rem;
+    }
+    .product-image {
+      flex: 1;
+      max-width: 400px;
+    }
+    .product-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .product-details {
+      flex: 1;
+    }
+    .product-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-family: 'Georgia', serif;
+    }
+    .product-price {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+    .product-description {
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .quantity-selector {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    .quantity-selector button {
+      background-color: #f1f1f1;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    .quantity-selector input {
+      width: 50px;
+      text-align: center;
+      padding: 0.5rem;
+      margin: 0 0.5rem;
+      border: 1px solid #ddd;
+    }
+    .buy-on-amazon {
+      display: inline-block;
+      background-color: #FF9900;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+      margin-bottom: 2rem;
+      text-decoration: none;
+      text-align: center;
+    }
+    .buy-on-amazon:hover {
+      background-color: #FF8C00;
+    }
+    .product-features {
+      margin-bottom: 2rem;
+    }
+    .product-features h3 {
+      margin-bottom: 1rem;
+    }
+    .product-features ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .product-features li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .product-features li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #4CAF50;
+    }
+    .reviews {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #eee;
+    }
+    .review {
+      margin-bottom: 2rem;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      border-radius: 5px;
+    }
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 0.5rem;
+    }
+    .review-author {
+      font-weight: bold;
+    }
+    .review-date {
+      color: #666;
+    }
+    .review-rating {
+      color: #FFD700;
+      margin-bottom: 0.5rem;
+    }
+    .related-products {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #eee;
+    }
+    .related-products h2 {
+      margin-bottom: 2rem;
+    }
+    .related-products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+    .related-product {
+      text-align: center;
+    }
+    .related-product img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+    }
+    .related-product-title {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+    .related-product-price {
+      color: #333;
+    }
+
+    /* Responsive Design */
+    @media screen and (max-width: 768px) {
+      header {
+        font-size: 1.8rem;
+        padding: 1rem 0;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 0 1rem;
+      }
+
+      .product-container {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1.5rem;
+      }
+
+      .product-image {
+        max-width: 100%;
+      }
+
+      .product-title {
+        font-size: 1.5rem;
+      }
+
+      .product-price {
+        font-size: 1.2rem;
+      }
+
+      .product-description {
+        font-size: 0.9rem;
+      }
+
+      .buy-on-amazon {
+        width: 100%;
+        padding: 0.8rem;
+        font-size: 0.9rem;
+      }
+
+      .reviews {
+        margin-top: 2rem;
+        padding-top: 1rem;
+      }
+
+      .review {
+        padding: 0.8rem;
+      }
+
+      .related-products-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .dropdown-content {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: auto;
+      }
+
+      .subdropdown-content {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: auto;
+      }
+    }
+
+    @media screen and (max-width: 480px) {
+      header {
+        font-size: 1.5rem;
+      }
+
+      nav {
+        font-size: 0.9rem;
+      }
+
+      .product-title {
+        font-size: 1.3rem;
+      }
+
+      .product-price {
+        font-size: 1.1rem;
+      }
+
+      .product-features li,
+      .features-section li {
+        font-size: 0.9rem;
+      }
+
+      .review {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>Aslan Publishing</header>
+  <nav>
+    <a href="index.html">home</a>
+    <span>&bull;</span>
+    <div class="dropdown">
+      <a href="#">categories</a>
+      <div class="dropdown-content">
+        <div class="subdropdown">
+          <a href="#">notebooks</a>
+          <div class="subdropdown-content">
+            <a href="trying-my-best-series.html">Trying My Best Series</a>
+            <a href="gifts.html">Gifts</a>
+          </div>
+        </div>
+        <a href="#">books</a>
+        <a href="#" title="Coming Soon!">freebies</a>
+      </div>
+    </div>
+    <span>&bull;</span>
+    <a href="about.html">about us</a>
+    <span>&bull;</span>
+    <a href="contact.html">contact</a>
+  </nav>
+
+  <div class="product-container">
+    <div class="product-image">
+      <img src="/onlyCover/I Survived Another Day Of Adulting..png" alt="I Survived Another Day Of Adulting">
+    </div>
+    <div class="product-details">
+      <h1 class="product-title">I Survived Another Day Of Adulting</h1>
+      <div class="product-description">
+        <p>Designed for everyday use, this 6x9-inch notebook is compact enough to carry anywhere—your desk, your bag, or your nightstand—so you never miss a great idea. With 200 lined pages, it's ideal for note-taking, journaling, work meetings, brainstorming sessions, or even just organizing your daily thoughts.</p>
+
+        <h3>📌 Product Features:</h3>
+        <ul>
+          <li>✔ 200 lined pages for writing, journaling, and note-taking</li>
+          <li>✔ 6x9-inch size – portable, lightweight, and easy to carry</li>
+          <li>✔ Matte cover design – sleek, stylish, and professional</li>
+          <li>✔ High-quality paper – smooth writing experience with minimal bleed-through</li>
+          <li>✔ Versatile use – perfect for work, school, creative writing, or personal journaling</li>
+        </ul>
+      </div>
+      <div class="product-price">$7.49</div>
+      <a href="https://a.co/d/dSqjrvV" target="_blank" class="buy-on-amazon">Buy on Amazon</a>
+
+      <div class="reviews">
+        <h2>Customer Reviews</h2>
+        <div class="review">
+          <div class="review-header">
+            <span class="review-author">David W.</span>
+            <span class="review-date">March 22, 2024</span>
+          </div>
+          <div class="review-rating">★★★★★</div>
+          <p>This notebook has been a game-changer for my writing routine. The prompts are thought-provoking and the quality is excellent. Highly recommend for writers!</p>
+        </div>
+        <div class="review">
+          <div class="review-header">
+            <span class="review-author">Sophie L.</span>
+            <span class="review-date">March 29, 2024</span>
+          </div>
+          <div class="review-rating">★★★★☆</div>
+          <p>Beautiful notebook with great paper quality. The writing prompts are helpful when I'm feeling stuck. Perfect for my daily journaling practice.</p>
+        </div>
+      </div>
+
+      <h2>Features</h2>
+      <div class="features-section">
+        <h3>📌 Who is this notebook for?</h3>
+        <ul>
+          <li>✔ Writers & creatives – perfect for jotting down story ideas, poetry, or daily reflections</li>
+          <li>✔ Students & professionals – ideal for lecture notes, meeting minutes, or work plans</li>
+          <li>✔ Planners & list-makers – great for to-do lists, goal tracking, and reminders</li>
+          <li>✔ Overthinkers & dreamers – a safe space for brain dumps, thoughts, and doodles</li>
+          <li>✔ Busy individuals – helps you stay organized and productive throughout your day</li>
+        </ul>
+
+        <h3>🎁 Perfect Gift for Any Occasion!</h3>
+        <p>Looking for a thoughtful and practical gift? This notebook makes an excellent present for:</p>
+        <ul>
+          <li>🎁 Coworkers & bosses – a fun yet functional office gift</li>
+          <li>🎁 Friends & family – ideal for birthdays, holidays, or just because</li>
+          <li>🎁 Writers & journal lovers – a stylish addition to any notebook collection</li>
+          <li>🎁 Graduates & students – a great tool for staying organized and motivated</li>
+        </ul>
+      </div>
+
+      <div class="related-products">
+        <h2>You May Also Like</h2>
+        <div class="related-products-grid">
+          <div class="related-product">
+            <a href="notebook1.html"><img src="/onlyCover/Doodles, Notes & Overthinking.png" alt="Doodles, Notes & Overthinking"></a>
+            <div class="related-product-title">Doodles, Notes & Overthinking</div>
+            <div class="related-product-price">$7.49</div>
+          </div>
+          <div class="related-product">
+            <a href="notebook3.html"><img src="/onlyCover/Genius thoughts (or grocery lists).png" alt="Genius thoughts"></a>
+            <div class="related-product-title">Genius thoughts (or grocery lists)</div>
+            <div class="related-product-price">$7.49</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function increaseQuantity() {
+      const input = document.getElementById('quantity');
+      input.value = parseInt(input.value) + 1;
+    }
+
+    function decreaseQuantity() {
+      const input = document.getElementById('quantity');
+      if (parseInt(input.value) > 1) {
+        input.value = parseInt(input.value) - 1;
+      }
+    }
+  </script>
+</body>
+</html> 

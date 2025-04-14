@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mom's Peace Place - Aslan Publishing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 2.5rem;
+      font-family: 'Georgia', serif;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      font-family: 'Georgia', serif;
+      position: relative;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1rem;
+      position: relative;
+    }
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      top: 100%;
+      left: 0;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: #f1f1f1;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .subdropdown {
+      position: relative;
+    }
+    .subdropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+      top: 0;
+      left: 100%;
+    }
+    .subdropdown:hover .subdropdown-content {
+      display: block;
+    }
+    .product-container {
+      display: flex;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      gap: 3rem;
+    }
+    .product-image {
+      flex: 1;
+      max-width: 400px;
+    }
+    .product-image img {
+      width: 100%;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .product-details {
+      flex: 1;
+    }
+    .product-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      font-family: 'Georgia', serif;
+    }
+    .product-price {
+      font-size: 1.5rem;
+      color: #333;
+      margin-bottom: 1.5rem;
+    }
+    .product-description {
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+    .buy-on-amazon {
+      display: inline-block;
+      background-color: #FF9900;
+      color: white;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+      margin-bottom: 2rem;
+      text-decoration: none;
+      text-align: center;
+    }
+    .buy-on-amazon:hover {
+      background-color: #FF8C00;
+    }
+    .product-features {
+      margin-bottom: 2rem;
+    }
+    .product-features h3 {
+      margin-bottom: 1rem;
+    }
+    .product-features ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .product-features li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    .product-features li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #4CAF50;
+    }
+  </style>
+</head>
+<body>
+  <header>Aslan Publishing</header>
+  <nav>
+    <a href="index.html">home</a>
+    <span>&bull;</span>
+    <div class="dropdown">
+      <a href="#">categories</a>
+      <div class="dropdown-content">
+        <div class="subdropdown">
+          <a href="#">notebooks</a>
+          <div class="subdropdown-content">
+            <a href="trying-my-best-series.html">Trying My Best Series</a>
+            <a href="gifts.html">Gifts</a>
+          </div>
+        </div>
+        <a href="#">books</a>
+        <a href="#" title="Coming Soon!">freebies</a>
+      </div>
+    </div>
+    <span>&bull;</span>
+    <a href="about.html">about us</a>
+    <span>&bull;</span>
+    <a href="contact.html">contact</a>
+  </nav>
+
+  <div class="product-container">
+    <div class="product-image">
+      <img src="/onlyCover/moms.png" alt="Mom's Peace Place">
+    </div>
+    <div class="product-details">
+      <h1 class="product-title">Mom's Peace Place</h1>
+      <div class="product-price">$7.49</div>
+
+      <div class="product-description">
+        <p>The perfect Mother's Day gift — a peaceful place just for her thoughts.</p>
+        <p>Give your mom the gift of calm, creativity, and clarity with Mom's Peace Place — a stunning 6x9 inch lined journal featuring 200 pages of writing space wrapped in a soft pastel floral cover.</p>
+        <p>Whether she's journaling, reflecting, or simply jotting notes, this elegant notebook will become her favorite quiet-time companion. Designed with love and care, it's the ideal gift for Mother's Day, birthdays, or "just because" moments.</p>
+      </div>
+
+      <a href="https://a.co/d/0KoMvlk" target="_blank" class="buy-on-amazon">Buy on Amazon</a>
+
+      <div class="product-features">
+        <h3>💖 Features:</h3>
+        <ul>
+          <li>6x9 inch paperback – easy to carry, perfect size for home or travel</li>
+          <li>200 lined pages – generous space for thoughts, plans, or notes</li>
+          <li>Soft pastel floral cover – calming watercolor design with feminine charm</li>
+          <li>Elegant matte finish – smooth, high-quality feel</li>
+          <li>Versatile use – journaling, gratitude lists, prayer notes, or daily writing</li>
+        </ul>
+      </div>
+
+      <p>Let her know she matters—every day of the year. Mom's Peace Place is her space to breathe.</p>
+    </div>
+  </div>
+</body>
+</html> 

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gifts - Aslan Publishing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 2.5rem;
+      font-family: 'Georgia', serif;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      font-family: 'Georgia', serif;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1rem;
+    }
+    .notebooks {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .notebook {
+      width: 400px;
+      height: 480px;
+      background-color: #ccc;
+      transition: all 0.3s ease;
+      opacity: 0.7;
+      cursor: pointer;
+      position: relative;
+      border-radius: 5px;
+    }
+    .notebook img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .notebook:hover {
+      transform: scale(1.1);
+      opacity: 1;
+      z-index: 2;
+    }
+    .notebook:hover ~ .notebook {
+      opacity: 0.3;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin: 2rem;
+      font-size: 1.2rem;
+      color: #333;
+      text-decoration: none;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+    .description {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 0 2rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <header>Gifts</header>
+  <nav>
+    <a href="index.html">Back to Home</a>
+  </nav>
+
+  <section class="notebooks">
+    <a class="notebook" href="notebook11.html"><img src="/onlyCover/moms.png" alt="Mom's Peace Place"></a>
+  </section>
+
+  <div class="description">
+    <h2>Mom's Peace Place</h2>
+    <p>The perfect Mother's Day gift — a peaceful place just for her thoughts.</p>
+    <p>Give your mom the gift of calm, creativity, and clarity with Mom's Peace Place — a stunning 6x9 inch lined journal featuring 200 pages of writing space wrapped in a soft pastel floral cover.</p>
+    <p>Whether she's journaling, reflecting, or simply jotting notes, this elegant notebook will become her favorite quiet-time companion. Designed with love and care, it's the ideal gift for Mother's Day, birthdays, or "just because" moments.</p>
+    <p>💖 Features:</p>
+    <ul>
+      <li>✔ 6x9 inch paperback – easy to carry, perfect size for home or travel</li>
+      <li>✔ 200 lined pages – generous space for thoughts, plans, or notes</li>
+      <li>✔ Soft pastel floral cover – calming watercolor design with feminine charm</li>
+      <li>✔ Elegant matte finish – smooth, high-quality feel</li>
+      <li>✔ Versatile use – journaling, gratitude lists, prayer notes, or daily writing</li>
+    </ul>
+    <p>Let her know she matters—every day of the year. Mom's Peace Place is her space to breathe.</p>
+  </div>
+
+  <a href="index.html" class="back-link">← Back to Home</a>
+</body>
+</html> 

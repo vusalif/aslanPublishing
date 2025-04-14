@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trying My Best Series - Aslan Publishing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+    header {
+      text-align: center;
+      padding: 2rem 0;
+      font-size: 2.5rem;
+      font-family: 'Georgia', serif;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-bottom: 2rem;
+      font-family: 'Georgia', serif;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-size: 1rem;
+    }
+    .notebooks {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+      padding: 2rem;
+    }
+    .notebook {
+      width: 400px;
+      height: 480px;
+      background-color: #ccc;
+      transition: all 0.3s ease;
+      opacity: 0.7;
+      cursor: pointer;
+      position: relative;
+      border-radius: 5px;
+    }
+    .notebook img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+    .notebook:hover {
+      transform: scale(1.1);
+      opacity: 1;
+      z-index: 2;
+    }
+    .notebook:hover ~ .notebook {
+      opacity: 0.3;
+    }
+    .back-link {
+      display: block;
+      text-align: center;
+      margin: 2rem;
+      font-size: 1.2rem;
+      color: #333;
+      text-decoration: none;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>Trying My Best Series</header>
+  <nav>
+    <a href="index.html">Back to Home</a>
+  </nav>
+
+  <section class="notebooks">
+    <a class="notebook" href="notebook8.html"><img src="/onlyCover/My Brain, Now on Paper.png" alt="My Brain, Now on Paper"></a>
+    <a class="notebook" href="notebook3.html"><img src="/onlyCover/Genius thoughts (or grocery lists).png" alt="Genius thoughts (or grocery lists)"></a>
+    <a class="notebook" href="notebook2.html"><img src="/onlyCover/I Survived Another Day Of Adulting..png" alt="I Survived Another Day Of Adulting"></a>
+    <a class="notebook" href="notebook5.html"><img src="/onlyCover/Warning Contains Unfiltered Thoughts.png" alt="Warning: Contains Unfiltered Thoughts"></a>
+    <a class="notebook" href="notebook9.html"><img src="/onlyCover/Professional Overthinker..png" alt="Professional Overthinker"></a>
+    <a class="notebook" href="notebook10.html"><img src="/onlyCover/Trying To Be Aweome, But Corporate Life Won't Let Me..png" alt="Trying To Be Awesome, But Corporate Life Won't Let Me"></a>
+    <a class="notebook" href="notebook7.html"><img src="/onlyCover/One page closer to success.png" alt="One Page Closer To Success"></a>
+    <a class="notebook" href="notebook4.html"><img src="/onlyCover/If You're Reading This, start Writing.png" alt="If You're Reading This, start Writing"></a>
+    <a class="notebook" href="notebook1.html"><img src="/onlyCover/Doodles, Notes & Overthinking.png" alt="Doodles, Notes & Overthinking"></a>
+    <a class="notebook" href="notebook6.html"><img src="/onlyCover/Manifesting Greatnes One Page At A Time.png" alt="Manifesting Greatness One Page At A Time"></a>
+  </section>
+
+  <a href="index.html" class="back-link">← Back to Home</a>
+</body>
+</html> 
